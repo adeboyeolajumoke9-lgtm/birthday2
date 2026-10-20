@@ -1,0 +1,488 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#ff168b">
+    <meta name="description" content="A little world of love, memories and birthday magic, created just for you.">
+
+    <title>A Little World Just for You ♡ | Love in Pixels</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://images.unsplash.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ATMOSPHERE -->
+    <div class="floating-hearts" aria-hidden="true"></div>
+
+    <!-- =====================================
+         01 — CINEMATIC WELCOME
+    ====================================== -->
+    <main>
+
+        <section id="welcome" class="screen welcome-screen">
+
+            <!-- Decorative light -->
+            <div aria-hidden="true" style="
+                position:absolute;
+                inset:0;
+                z-index:-1;
+                pointer-events:none;
+                background:
+                    radial-gradient(circle at 15% 30%, rgba(255,22,139,.22), transparent 27%),
+                    radial-gradient(circle at 85% 65%, rgba(255,255,255,.7), transparent 28%);
+            "></div>
+
+            <!-- Top brand -->
+            <div style="
+                position:absolute;
+                top:27px;
+                left:0;
+                right:0;
+                z-index:3;
+                display:flex;
+                justify-content:center;
+                align-items:center;
+                gap:10px;
+                color:#a51b60;
+                font-size:.68rem;
+                letter-spacing:.25em;
+            ">
+                <span style="color:#ff168b;font-size:1.2rem;">✿</span>
+                LOVE IN PIXELS
+                <span style="color:#ff168b;font-size:1.2rem;">✿</span>
+            </div>
+
+            <div class="welcome-content">
+
+                <p class="eyebrow">
+                    ✦ A LITTLE WORLD CREATED JUST FOR YOU ✦
+                </p>
+
+                <!-- Hero floral photograph -->
+                <div style="
+                    position:relative;
+                    width:min(100%, 310px);
+                    margin:0 auto 36px;
+                    padding:9px;
+                    border-radius:48% 48% 10px 10px;
+                    background:linear-gradient(145deg,#fff,#ff77b9,#ffd9eb);
+                    box-shadow:0 20px 65px rgba(255,22,139,.24);
+                    transform:rotate(-2deg);
+                ">
+
+                    <div style="
+                        position:absolute;
+                        inset:-12px;
+                        border:1px solid rgba(255,22,139,.32);
+                        border-radius:49% 49% 15px 15px;
+                        pointer-events:none;
+                    "></div>
+
+                    <img
+                        src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=900&q=85"
+                        alt="Romantic flowers in soft pink tones"
+                        fetchpriority="high"
+                        style="
+                            display:block;
+                            width:100%;
+                            height:270px;
+                            object-fit:cover;
+                            object-position:center;
+                            border-radius:46% 46% 5px 5px;
+                        "
+                    >
+
+                    <div style="
+                        position:absolute;
+                        right:-20px;
+                        bottom:18px;
+                        width:65px;
+                        height:65px;
+                        display:grid;
+                        place-items:center;
+                        border:1px solid rgba(255,255,255,.9);
+                        border-radius:50%;
+                        background:linear-gradient(145deg,#ff168b,#ff8fc6);
+                        box-shadow:0 10px 30px rgba(255,22,139,.3);
+                        color:white;
+                        font-size:1.8rem;
+                        transform:rotate(12deg);
+                    " aria-hidden="true">♡</div>
+
+                </div>
+
+                <h1>
+                    Someone has a<br>
+                    <em>surprise</em> for you.
+                </h1>
+
+                <p class="welcome-message">
+                    A little world of beautiful feelings,
+                    treasured memories, and all the lovely
+                    things you deserve to hear.
+                </p>
+
+                <button id="open-surprise" class="primary-button">
+                    Enter Your Little Dream
+                    <span>♡</span>
+                </button>
+
+                <p class="bottom-note">
+                    A moment made just for you.
+                </p>
+
+            </div>
+
+            <!-- Decorative side notes -->
+            <div aria-hidden="true" style="
+                position:absolute;
+                left:22px;
+                top:50%;
+                transform:translateY(-50%) rotate(-90deg);
+                transform-origin:left center;
+                color:#c34d87;
+                font-size:.58rem;
+                letter-spacing:.25em;
+                opacity:.75;
+            ">MADE WITH LOVE</div>
+
+            <div aria-hidden="true" style="
+                position:absolute;
+                right:18px;
+                top:50%;
+                transform:translateY(-50%) rotate(90deg);
+                transform-origin:right center;
+                color:#c34d87;
+                font-size:.58rem;
+                letter-spacing:.25em;
+                opacity:.75;
+            ">OPEN YOUR HEART</div>
+
+        </section>
+
+
+        <!-- =====================================
+             02 — THE BIRTHDAY REVEAL
+        ====================================== -->
+        <section id="birthday" class="screen birthday-screen hidden">
+
+            <div class="birthday-content">
+
+                <p class="eyebrow">
+                    TODAY, THE WORLD CELEBRATES YOU
+                </p>
+
+                <div class="birthday-flower" aria-hidden="true">🎀</div>
+
+                <p style="
+                    margin-bottom:17px;
+                    color:#ff168b;
+                    font-size:.76rem;
+                    letter-spacing:.15em;
+                ">A NEW CHAPTER BEGINS</p>
+
+                <h2>
+                    Happy Birthday,<br>
+                    <em id="recipient-name">Beautiful</em>
+                </h2>
+
+                <p class="birthday-message">
+                    If happiness could take a human form,
+                    perhaps it would look a little like you.
+                </p>
+
+                <p class="birthday-message">
+                    Today, this little corner of the world
+                    belongs entirely to you. Every detail
+                    is a reminder that you are worth celebrating.
+                </p>
+
+                <button class="secondary-button" data-next="letter">
+                    A Letter From the Heart 💌
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             03 — THE LOVE LETTER
+        ====================================== -->
+        <section id="letter" class="screen letter-screen hidden">
+
+            <div class="section-heading">
+
+                <p class="eyebrow">A LETTER THAT FOUND ITS WAY TO YOU</p>
+
+                <h2>
+                    If my heart could write,<br>
+                    <em>it might say this.</em>
+                </h2>
+
+                <p>
+                    Some things are too beautiful to leave unsaid.
+                </p>
+
+            </div>
+
+            <div class="envelope-wrapper">
+
+                <button
+                    id="open-letter"
+                    class="envelope"
+                    aria-label="Open your special letter"
+                >
+                    <span class="envelope-icon">💌</span>
+                    <span class="envelope-label">A little letter for you</span>
+                </button>
+
+            </div>
+
+            <article id="love-letter" class="love-letter hidden">
+
+                <p class="letter-greeting">
+                    To someone wonderfully special,
+                </p>
+
+                <p>
+                    I wish you could borrow my eyes for just
+                    a moment and see all the beautiful things
+                    that make you who you are.
+                </p>
+
+                <p>
+                    The kindness in your heart. The light in
+                    your smile. The little things you do without
+                    realising how much they mean.
+                </p>
+
+                <p>
+                    I hope this next chapter is gentle with you.
+                    I hope it brings unexpected joy, beautiful
+                    opportunities, peaceful mornings, and nights
+                    filled with gratitude.
+                </p>
+
+                <p>
+                    Never forget that you deserve a love that
+                    celebrates you, a life that excites you,
+                    and happiness that feels like home.
+                </p>
+
+                <p>
+                    Today is your reminder: the world is more
+                    beautiful because you are in it.
+                </p>
+
+                <p class="letter-signature">
+                    With all the love this little letter can hold, ♡
+                </p>
+
+            </article>
+
+            <button class="secondary-button next-button" data-next="memories">
+                Let's Look at Something Beautiful 📸
+            </button>
+
+        </section>
+
+
+        <!-- =====================================
+             04 — THE MEMORY GALLERY
+             Online stock photography for the demo
+        ====================================== -->
+        <section id="memories" class="screen memories-screen hidden">
+
+            <div class="section-heading">
+
+                <p class="eyebrow">A COLLECTION OF BEAUTIFUL THINGS</p>
+
+                <h2>
+                    Moments that feel<br>
+                    <em>like poetry.</em>
+                </h2>
+
+                <p>
+                    A little inspiration for the memories
+                    worth keeping close.
+                </p>
+
+            </div>
+
+            <div class="photo-gallery">
+
+                <figure class="memory-card">
+                    <img
+                        src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=900&q=85"
+                        alt="Beautiful flowers in soft romantic colours"
+                        loading="lazy"
+                    >
+                    <figcaption>
+                        For all the beauty life brings. ♡
+                    </figcaption>
+                </figure>
+
+                <figure class="memory-card">
+                    <img
+                        src="https://images.unsplash.com/photo-1518895949257-7621c3c786d7?auto=format&fit=crop&w=900&q=85"
+                        alt="Romantic pink roses"
+                        loading="lazy"
+                    >
+                    <figcaption>
+                        For the little things that mean everything.
+                    </figcaption>
+                </figure>
+
+                <figure class="memory-card">
+                    <img
+                        src="https://images.unsplash.com/photo-1523438885200-e635ba2c371e?auto=format&fit=crop&w=900&q=85"
+                        alt="A romantic floral arrangement"
+                        loading="lazy"
+                    >
+                    <figcaption>
+                        For the moments that stay with us. 🌷
+                    </figcaption>
+                </figure>
+
+            </div>
+
+            <p style="
+                max-width:440px;
+                margin-top:32px;
+                color:#94617c;
+                font-family:'Cormorant Garamond',serif;
+                font-size:1.3rem;
+                font-style:italic;
+                line-height:1.7;
+            ">
+                Replace these inspiration photos with your
+                own favourite memories when personalising the gift.
+            </p>
+
+            <button class="secondary-button" data-next="reasons">
+                A Few Things Worth Celebrating ♡
+            </button>
+
+        </section>
+
+
+        <!-- =====================================
+             05 — THE REASONS
+        ====================================== -->
+        <section id="reasons" class="screen reasons-screen hidden">
+
+            <div class="section-heading">
+
+                <p class="eyebrow">A SMALL REMINDER OF YOUR MAGIC</p>
+
+                <h2>
+                    There is so much<br>
+                    <em>to love about you.</em>
+                </h2>
+
+                <p>
+                    And these are only the beginning.
+                </p>
+
+            </div>
+
+            <div id="reasons-container" class="reasons-container">
+
+                <div class="reason-card">
+                    <span>01 — YOUR HEART</span>
+                    <p>The kindness you carry into the world.</p>
+                </div>
+
+                <div class="reason-card">
+                    <span>02 — YOUR LIGHT</span>
+                    <p>The way your presence makes things brighter.</p>
+                </div>
+
+                <div class="reason-card">
+                    <span>03 — YOUR SMILE</span>
+                    <p>The little happiness you bring to ordinary days.</p>
+                </div>
+
+                <div class="reason-card">
+                    <span>04 — YOUR JOURNEY</span>
+                    <p>The beautiful person you are becoming.</p>
+                </div>
+
+            </div>
+
+            <button id="more-reasons" class="secondary-button">
+                Tell Me Another Reason 🌸
+            </button>
+
+            <button class="primary-button final-button" data-next="final">
+                There's One Last Thing
+                <span>♡</span>
+            </button>
+
+        </section>
+
+
+        <!-- =====================================
+             06 — THE FINAL MOMENT
+        ====================================== -->
+        <section id="final" class="screen final-screen hidden">
+
+            <div class="final-content">
+
+                <p class="eyebrow">A LITTLE WISH FOR YOUR NEW CHAPTER</p>
+
+                <div class="final-flower" aria-hidden="true">💐</div>
+
+                <h2>
+                    May life love you<br>
+                    <em>beautifully.</em>
+                </h2>
+
+                <p class="final-message">
+                    May your dreams grow bigger than your fears,
+                    may good things find their way to you,
+                    and may the love you give return to you
+                    in a thousand beautiful forms.
+                </p>
+
+                <button id="final-surprise" class="primary-button">
+                    Open Your Final Wish ♡
+                </button>
+
+                <p id="final-wish" class="final-wish hidden">
+                    If you remember just one thing from today,
+                    let it be this: you are worthy of beautiful
+                    things, sincere love, and a life that makes
+                    your heart feel full.
+
+                    <br><br>
+
+                    Happy Birthday, Beautiful. ❤️
+                </p>
+
+                <p class="signature">
+                    A little piece of the internet,
+                    made with love by Love in Pixels ✨
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
